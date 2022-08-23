@@ -1,0 +1,10 @@
+.wrapper {
+	width: 85vw;
+	width: clamp(32rem, 85vw, 160rem);
+	margin-left: auto;
+	margin-right: auto;
+	&--xl {
+		width: 90vw;
+		width: clamp(30rem, 90vw, 170rem);
+	}
+}
