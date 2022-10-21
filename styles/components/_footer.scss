@@ -1,0 +1,73 @@
+.footer {
+	&__main {
+		background-color: var(--cl-black);
+		color: var(--cl-white);
+		overflow: hidden;
+		.space {
+			padding: clamp(1rem, 0.1vw, 1rem);
+		}
+	}
+	&__mail {
+		font-family: var(--ff-gigantic);
+		font-size: 3.2rem;
+		margin-top: 4rem;
+		display: block;
+	}
+	&__text-slide {
+		padding: 10rem 0;
+		width: fit-content;
+		display: flex;
+		position: relative;
+		white-space: nowrap;
+		gap: 10vw;
+		will-change: transform;
+		font-size: clamp(4rem, 4.2vw, 8rem);
+		font-family: var(--ff-gigantic);
+		border-bottom: 1px solid rgba(#fff, 0.5);
+	}
+	&__info {
+		padding: 10rem 0;
+		font-size: 2.8rem;
+		p {
+			margin: 1.5rem 0;
+		}
+	}
+	&__sup {
+		background-color: var(--cl-white);
+		padding: 2rem 0;
+		&__text {
+			font-size: 1.6rem;
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+	&__side {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		ul {
+			list-style: none;
+			li {
+				margin: 2rem 0;
+				font-size: 2rem;
+				position: relative;
+				padding-right: 6rem;
+				a {
+					&:after {
+						content: "";
+						width: 2rem;
+						height: 2rem;
+						position: absolute;
+						background-image: url("/images/link.png");
+						background-size: cover;
+						right: 0;
+					}
+				}
+
+				&:last-child {
+					margin: 0;
+				}
+			}
+		}
+	}
+}

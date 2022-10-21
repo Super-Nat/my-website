@@ -1,23 +1,7 @@
-import { motion, useScroll, useTransform, Variant } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-const banner = {
-	animate: {
-		transition: {
-			delayChildren: 1.9,
-			staggerChildren: 0.1,
-		},
-	},
-};
-const letterAni = {
-	initial: { y: 400 },
-	animate: {
-		y: 0,
-		transition: {
-			ease: [0.6, 0.01, -0.05, 0.95],
-			duration: 1,
-		},
-	},
-};
+import AnimatedLetters from "../AnimatedLetters";
+
 const Hero: React.FC = () => {
 	const ref = useRef<HTMLDivElement | null>(null);
 	const [width, setWidth] = useState<number>(1246);
@@ -130,15 +114,5 @@ const Hero: React.FC = () => {
 		</motion.section>
 	);
 };
-
-const AnimatedLetters = ({ title }: any) => (
-	<motion.div variants={banner} initial="initial" animate="animate">
-		{[...title].map((letter, index) => (
-			<motion.span key={index} variants={letterAni}>
-				{letter === " " ? <span className="space"></span> : letter}
-			</motion.span>
-		))}
-	</motion.div>
-);
 
 export default Hero;

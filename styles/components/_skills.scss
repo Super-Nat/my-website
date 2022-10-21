@@ -1,0 +1,27 @@
+.skills {
+	background-color: var(--cl-black);
+	color: var(--cl-white);
+	font-family: var(--ff-gigantic);
+	font-size: clamp(1.4rem, 2.3vw, 3.2rem);
+	padding: 13rem 0 6rem;
+	h2 {
+		font-size: clamp(3rem, 4.2vw, 8rem);
+		margin: 3rem 0 10rem;
+	}
+	&__banner {
+		border-top: 0.2rem solid var(--cl-white);
+		border-bottom: 0.2rem solid var(--cl-white);
+		padding: 1rem 0;
+	}
+	&__bar {
+		display: flex;
+		font-size: 4rem;
+		flex-wrap: nowrap;
+		white-space: nowrap;
+		position: relative;
+		margin: 1rem 0;
+		&--2 {
+			justify-content: flex-end;
+		}
+	}
+}
