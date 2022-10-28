@@ -3,7 +3,7 @@
 	font-size: clamp(1.4rem, 1.7vw, 3.2rem);
 	text-align: center;
 	&__video {
-		height: 50rem;
+		height: clamp(2rem, 27vw, 50rem);
 		margin: 0 auto;
 		font-family: var(--ff-gigantic);
 		display: flex;
@@ -13,6 +13,7 @@
 		overflow: hidden;
 		position: relative;
 		margin-top: -5rem;
+
 		video {
 			object-fit: cover;
 			position: absolute;
@@ -32,6 +33,9 @@
 		letter-spacing: 1px;
 		line-height: 1.5;
 		margin: 10rem auto;
+		@media screen and (max-width: 768px) {
+			width: 90%;
+		}
 	}
 	h2 {
 		font-size: clamp(2.4rem, 4.2vw, 8rem);

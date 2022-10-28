@@ -97,10 +97,12 @@ const Footer: React.FC = () => {
 								whileInView="onscreen"
 								viewport={{ once: true, amount: 0.3 }}
 							>
-								<p>
-									Feel free to reach out if you want to collaborate with me.
-								</p>
-								<p>Please drop me a line!</p>
+								<div className="footer__desc">
+									<p>
+										Feel free to reach out if you want to collaborate with me.
+									</p>
+									<p>Please drop me a line!</p>
+								</div>
 								<Link href="mailto:nuttsumc@gmail.com">
 									<a className="footer__mail">NUTTSUMC@GMAIL.COM</a>
 								</Link>
