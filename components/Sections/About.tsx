@@ -40,10 +40,9 @@ const About: React.FC = () => {
 				whileInView="onscreen"
 				viewport={{ once: true, amount: 0.5 }}
 			>
-				Hello, I'm a web developer, project leader and apprentice mentor.
-				Experienced in WordPress (Advance), E-learning (HTML, SCSS, Jquery),
-				VueJs, Symfony (Basic) with 6 years. Now I'm learning and practice
-				ReactJs to be a ReactJs developer.
+				{
+					"Hello, I'm a web developer, project leader and apprentice mentor. Experienced in WordPress (Advance), E-learning (HTML, SCSS, Jquery), VueJs, Symfony (Basic) with 6 years. Now I'm learning and practice ReactJs to be a ReactJs developer."
+				}
 			</motion.div>
 		</section>
 	);
