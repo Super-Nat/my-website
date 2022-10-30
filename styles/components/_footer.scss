@@ -87,8 +87,8 @@
 				}
 				&:after {
 					content: "";
-					width: 2rem;
-					height: 2rem;
+					width: clamp(1rem, 1.1vw, 2rem);
+					height: clamp(1rem, 1.1vw, 2rem);
 					position: absolute;
 					background-image: url("/images/link.png");
 					background-size: cover;
