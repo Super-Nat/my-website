@@ -135,8 +135,14 @@ const Work: React.FC = () => {
 										<Image src="/images/link.png" layout="fill" alt="link" />
 									</div>
 								</div>
-								<div className="work__item__img"></div>
-								<div className="work__item__text">Project Name</div>
+								<div className="work__item__img">
+									<Image
+										src="/images/kkk-port.jpg"
+										layout="fill"
+										alt="Tic-Tac-Toe"
+									/>
+								</div>
+								<div className="work__item__text">KKK Portfolio</div>
 							</div>
 						</a>
 					</Link>
