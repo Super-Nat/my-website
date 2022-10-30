@@ -69,6 +69,12 @@ const Work: React.FC = () => {
 					<Link href="https://netflix-clone-qew7etz22-super-nat.vercel.app/">
 						<a target="_blank">
 							<div className="work__item">
+								<div className="work__hidden">
+									<span> Go to site</span>
+									<div className="work__item__link">
+										<Image src="/images/link.png" layout="fill" alt="link" />
+									</div>
+								</div>
 								<div className="work__item__img">
 									<Image
 										src="/images/netflix-clone.jpg"
@@ -83,6 +89,12 @@ const Work: React.FC = () => {
 					<Link href="https://tesla-clone-super-nat.vercel.app/">
 						<a target="_blank">
 							<div className="work__item">
+								<div className="work__hidden">
+									<span> Go to site</span>
+									<div className="work__item__link">
+										<Image src="/images/link.png" layout="fill" alt="link" />
+									</div>
+								</div>
 								<div className="work__item__img">
 									<Image
 										src="/images/tesla-clone.jpg"
@@ -97,6 +109,12 @@ const Work: React.FC = () => {
 					<Link href="https://tic-tac-toe-super-nat.vercel.app/">
 						<a target="_blank">
 							<div className="work__item">
+								<div className="work__hidden">
+									<span> Go to site</span>
+									<div className="work__item__link">
+										<Image src="/images/link.png" layout="fill" alt="link" />
+									</div>
+								</div>
 								<div className="work__item__img">
 									<Image
 										src="/images/tic-tac-toe.jpg"
@@ -111,6 +129,12 @@ const Work: React.FC = () => {
 					<Link href="">
 						<a>
 							<div className="work__item">
+								<div className="work__hidden">
+									<span> Go to site!</span>
+									<div className="work__item__link">
+										<Image src="/images/link.png" layout="fill" alt="link" />
+									</div>
+								</div>
 								<div className="work__item__img"></div>
 								<div className="work__item__text">Project Name</div>
 							</div>
