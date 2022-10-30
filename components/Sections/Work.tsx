@@ -33,10 +33,28 @@ const playVariants: Variants = {
 	play: { transition: { staggerChildren: 0.07, delayChildren: 0.2 } },
 	pause: { transition: { staggerChildren: 0.05, staggerDirection: -1 } },
 };
-
+const cardVariants: Variants = {
+	play: {
+		y: 0,
+		opacity: 1,
+		transition: {
+			y: { stiffness: 1000, velocity: -100 },
+		},
+	},
+	pause: {
+		y: 100,
+		opacity: 0,
+		transition: {
+			y: { stiffness: 1000 },
+		},
+	},
+};
 const Work: React.FC = () => {
 	const ref = useRef(null);
-	const isInView = useInView(ref, { once: true });
+	const isInView = useInView(ref, {
+		once: true,
+		amount: 0.6,
+	});
 	return (
 		<motion.section
 			className="work"
@@ -63,7 +81,7 @@ const Work: React.FC = () => {
 			</h2>
 			<div className="wrapper">
 				<div className="work__inner">
-					<div className="work__item">
+					<motion.div className="work__item" variants={cardVariants}>
 						<Link href="https://netflix-clone-qew7etz22-super-nat.vercel.app/">
 							<a target="_blank">
 								<div className="work__hidden">
@@ -82,8 +100,8 @@ const Work: React.FC = () => {
 								<div className="work__item__text">Netflix-clone</div>
 							</a>
 						</Link>
-					</div>
-					<div className="work__item">
+					</motion.div>
+					<motion.div className="work__item" variants={cardVariants}>
 						<Link href="https://tesla-clone-super-nat.vercel.app/">
 							<a target="_blank">
 								<div className="work__hidden">
@@ -102,8 +120,8 @@ const Work: React.FC = () => {
 								<div className="work__item__text">Tesla-clone</div>
 							</a>
 						</Link>
-					</div>
-					<div className="work__item">
+					</motion.div>
+					<motion.div className="work__item" variants={cardVariants}>
 						<Link href="https://tic-tac-toe-super-nat.vercel.app/">
 							<a target="_blank">
 								<div className="work__hidden">
@@ -122,8 +140,8 @@ const Work: React.FC = () => {
 								<div className="work__item__text">TIC-TAC-TOE</div>
 							</a>
 						</Link>
-					</div>
-					<div className="work__item">
+					</motion.div>
+					<motion.div className="work__item" variants={cardVariants}>
 						<Link href="">
 							<a>
 								<div className="work__hidden">
@@ -142,7 +160,7 @@ const Work: React.FC = () => {
 								<div className="work__item__text">KKK Portfolio</div>
 							</a>
 						</Link>
-					</div>
+					</motion.div>
 				</div>
 			</div>
 		</motion.section>
