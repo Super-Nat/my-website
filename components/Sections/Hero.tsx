@@ -78,7 +78,7 @@ const Hero: React.FC = () => {
 					</div>
 				</motion.div>
 			</div>
-			<motion.div className="hero__row">
+			<div className="hero__row no-hide">
 				<div className="wrapper">
 					<div className="hero__text hero__text--small">
 						<motion.span
@@ -110,7 +110,7 @@ const Hero: React.FC = () => {
 						</motion.span>
 					</motion.div>
 				</div>
-			</motion.div>
+			</div>
 		</motion.section>
 	);
 };

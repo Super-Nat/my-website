@@ -8,7 +8,10 @@
 
 	&__row {
 		margin: 3rem 0;
-		// overflow: hidden;
+		overflow: hidden;
+		&.no-hide {
+			overflow: visible;
+		}
 	}
 
 	&__text {
