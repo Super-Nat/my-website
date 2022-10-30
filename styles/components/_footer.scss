@@ -19,7 +19,12 @@
 			height: 1px;
 			background-color: var(--cl-white);
 			bottom: -0.2rem;
-			transition: all 0.2s;
+			transition: all 0.5s;
+		}
+		&:hover {
+			&:before {
+				width: 0;
+			}
 		}
 	}
 	&__text-slide {
