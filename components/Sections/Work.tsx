@@ -1,6 +1,7 @@
-import { motion, Variants } from "framer-motion";
+import { motion, useInView, Variants } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
+import { useRef } from "react";
 
 const lineVariants: Variants = {
 	offscreen: {
@@ -10,22 +11,6 @@ const lineVariants: Variants = {
 		width: "100%",
 		transition: {
 			duration: 1.5,
-		},
-	},
-};
-
-const cardVariants: Variants = {
-	offscreen: {
-		x: -10,
-		opacity: 0,
-	},
-	onscreen: {
-		x: 0,
-		opacity: 1,
-		transition: {
-			type: "spring",
-			bounce: 0.4,
-			duration: 0.5,
 		},
 	},
 };
@@ -44,9 +29,21 @@ const titleVariants: Variants = {
 	},
 };
 
+const playVariants: Variants = {
+	play: { transition: { staggerChildren: 0.07, delayChildren: 0.2 } },
+	pause: { transition: { staggerChildren: 0.05, staggerDirection: -1 } },
+};
+
 const Work: React.FC = () => {
+	const ref = useRef(null);
+	const isInView = useInView(ref, { once: true });
 	return (
-		<section className="work">
+		<motion.section
+			className="work"
+			ref={ref}
+			variants={playVariants}
+			animate={isInView ? "play" : "pause"}
+		>
 			<h2 className="work__title">
 				<motion.span
 					variants={titleVariants}
@@ -66,9 +63,9 @@ const Work: React.FC = () => {
 			</h2>
 			<div className="wrapper">
 				<div className="work__inner">
-					<Link href="https://netflix-clone-qew7etz22-super-nat.vercel.app/">
-						<a target="_blank">
-							<div className="work__item">
+					<div className="work__item">
+						<Link href="https://netflix-clone-qew7etz22-super-nat.vercel.app/">
+							<a target="_blank">
 								<div className="work__hidden">
 									<span> Go to site</span>
 									<div className="work__item__link">
@@ -83,12 +80,12 @@ const Work: React.FC = () => {
 									/>
 								</div>
 								<div className="work__item__text">Netflix-clone</div>
-							</div>
-						</a>
-					</Link>
-					<Link href="https://tesla-clone-super-nat.vercel.app/">
-						<a target="_blank">
-							<div className="work__item">
+							</a>
+						</Link>
+					</div>
+					<div className="work__item">
+						<Link href="https://tesla-clone-super-nat.vercel.app/">
+							<a target="_blank">
 								<div className="work__hidden">
 									<span> Go to site</span>
 									<div className="work__item__link">
@@ -103,12 +100,12 @@ const Work: React.FC = () => {
 									/>
 								</div>
 								<div className="work__item__text">Tesla-clone</div>
-							</div>
-						</a>
-					</Link>
-					<Link href="https://tic-tac-toe-super-nat.vercel.app/">
-						<a target="_blank">
-							<div className="work__item">
+							</a>
+						</Link>
+					</div>
+					<div className="work__item">
+						<Link href="https://tic-tac-toe-super-nat.vercel.app/">
+							<a target="_blank">
 								<div className="work__hidden">
 									<span> Go to site</span>
 									<div className="work__item__link">
@@ -123,12 +120,12 @@ const Work: React.FC = () => {
 									/>
 								</div>
 								<div className="work__item__text">TIC-TAC-TOE</div>
-							</div>
-						</a>
-					</Link>
-					<Link href="">
-						<a>
-							<div className="work__item">
+							</a>
+						</Link>
+					</div>
+					<div className="work__item">
+						<Link href="">
+							<a>
 								<div className="work__hidden">
 									<span> Go to site!</span>
 									<div className="work__item__link">
@@ -143,12 +140,12 @@ const Work: React.FC = () => {
 									/>
 								</div>
 								<div className="work__item__text">KKK Portfolio</div>
-							</div>
-						</a>
-					</Link>
+							</a>
+						</Link>
+					</div>
 				</div>
 			</div>
-		</section>
+		</motion.section>
 	);
 };
 

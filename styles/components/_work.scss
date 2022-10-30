@@ -81,6 +81,7 @@
 	&__item {
 		text-align: center;
 		position: relative;
+		// box-shadow: 0.5rem 0.5rem 1rem #e4e4e4;
 		&__link {
 			position: relative;
 			width: clamp(1rem, 1.1vw, 2rem);

@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import { ScrollerMotion } from "scroller-motion";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Loader from "../components/Loader";
@@ -10,7 +11,7 @@ import Work from "../components/Sections/Work";
 
 const Home: NextPage = () => {
 	return (
-		<>
+		<ScrollerMotion>
 			<Loader />
 			<Head>
 				<title>Nat | Portfolio</title>
@@ -29,7 +30,7 @@ const Home: NextPage = () => {
 				<Work />
 			</main>
 			<Footer />
-		</>
+		</ScrollerMotion>
 	);
 };
 
