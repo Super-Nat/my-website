@@ -116,12 +116,12 @@ const Footer: React.FC = () => {
 								<ul>
 									<li>Or</li>
 									<li>
-										<Link href="">
+										<Link href="https://www.linkedin.com/in/natchapon-hemathulin-a5420a230/">
 											<a>LinkedIn</a>
 										</Link>
 									</li>
 									<li>
-										<Link href="#">
+										<Link href="https://github.com/Super-Nat">
 											<a>Github</a>
 										</Link>
 									</li>
