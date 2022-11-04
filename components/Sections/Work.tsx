@@ -142,7 +142,7 @@ const Work: React.FC = () => {
 						</Link>
 					</motion.div>
 					<motion.div className="work__item" variants={cardVariants}>
-						<Link href="">
+						<Link href="https://kunnapat.vercel.app/">
 							<a>
 								<div className="work__hidden">
 									<span> Go to site!</span>
